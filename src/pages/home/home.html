@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title textaling="center" >
+      Prueba Didactica 
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="send"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-list>
+    <ion-item *ngFor="let item of itemsRef$ | async" (click)="itemClicked(item)">
+        <h2>{{item.titulo}}</h2>
+        <h3>{{item.descripcion}}</h3>
+    </ion-item>
+  </ion-list>
+
+  <ion-footer>
+          
+        <ion-buttons >
+            <button ion-button icon-end  color="royal" round >
+                Nuevo 
+                <ion-icon name="create"></ion-icon>
+              </button>
+        
+          <button ion-button icon-end  color="royal"   id="login" (click)="idclicked(id)"  round >
+            Login
+            <ion-icon name="md-log-in"></ion-icon>
+          </button>
+       
+        </ion-buttons>
+
+  </ion-footer>
+</ion-content>
+
+
+
+   
+  
